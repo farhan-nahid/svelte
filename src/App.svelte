@@ -1,10 +1,19 @@
 <script>
-	export let name;
+	// export let name;
+	const num = 0;
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<h4>Number {num}</h4>
+	{#if num === 0}
+	<h1>Number is zero</h1>
+	{:else if num <0}
+	<h1>Number is Negetive</h1>
+	{:else if num > 0}
+	<h1>Number is Positive</h1>
+	{:else}
+	<h1>This is not a number</h1>
+	{/if}
 </main>
 
 <style>
